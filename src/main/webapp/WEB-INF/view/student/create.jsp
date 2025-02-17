@@ -53,13 +53,19 @@
                                 <form:input type="number" class="form-control" path="soDT" />
 
                             </div>
-                            <div class="mb-3 col-12">
-                                <label class="form-label">Ma Truong:</label>
-                                <form:input type="number" class="form-control" path="maTruong" />
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label">Ma Truong</label>
+                                <form:select class="form-select" path="maTruong">
+                                    <form:option value="1">1</form:option>
+                                    <form:option value="2">2</form:option>
+                                </form:select>
                             </div>
-                            <div class="mb-3 col-12">
+                            <div class="mb-3 col-12 col-md-6">
                                 <label class="form-label">Ma Nganh:</label>
-                                <form:input type="number" class="form-control" path="maNganh" />
+                                <form:select class="form-select" path="maNganh">
+                                    <form:option value="1">1</form:option>
+                                    <form:option value="2">2</form:option>
+                                </form:select>
                             </div>
                             <div class="mb-3 col-12">
                                 <label class="form-label">He Tot Nghiep:</label>
