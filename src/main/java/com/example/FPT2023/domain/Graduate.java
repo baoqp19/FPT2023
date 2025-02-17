@@ -1,14 +1,19 @@
 package com.example.FPT2023.domain;
 
+import java.time.Instant;
+import java.time.LocalDate;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.MapsId;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Past;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,15 +27,21 @@ public class Graduate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     private Long soCMND;
 
+    @NotNull
     private Long maTruong;
 
+    @NotNull
     private Long maNganh;
 
     private String heTN;
 
-    private String ngayTN;
+    @NotNull(message = "Ngày tốt nghiệp không được để trống")
+    @Past(message = "Ngày tốt nghiệp phải là ngày trong quá khứ") // Kiểm tra ngày hợp lệ
+    @DateTimeFormat(pattern = "yyyy-MM-dd") // Định dạng ngày đúng khi nhận từ JSP
+    private LocalDate ngayTN;
 
     private String LoaiTN;
 

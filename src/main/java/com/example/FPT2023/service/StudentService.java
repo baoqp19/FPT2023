@@ -34,8 +34,8 @@ public class StudentService {
         graduate.setSoCMND(studentAndGraduteDTO.getSoCMND());
         graduate.setMaNganh(studentAndGraduteDTO.getMaNganh());
         graduate.setMaTruong(studentAndGraduteDTO.getMaTruong());
-        graduate.setHeTN(studentAndGraduteDTO.getHeTN());
         graduate.setNgayTN(studentAndGraduteDTO.getNgayTN());
+        graduate.setHeTN(studentAndGraduteDTO.getHeTN());
         graduate.setLoaiTN(studentAndGraduteDTO.getLoaiTN());
 
         graduate.setStudent(student);
