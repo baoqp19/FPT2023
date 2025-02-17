@@ -7,5 +7,5 @@ import com.example.FPT2023.domain.Graduate;
 
 @Repository
 public interface GraduateRepository extends JpaRepository<Graduate, Long> {
-    
+
 }
