@@ -53,4 +53,9 @@ public class UserController {
         return "redirect:/student/create"; // Chuyển hướng sau khi submit thành công
     }
 
+    @GetMapping("search/")
+    public String SearchHoTen(String name) {
+        return "baodeptrai";
+    }
+
 }
